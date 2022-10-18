@@ -17,4 +17,4 @@ jobs:
         server: www.theupfolio.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: Upfolio/Upfolio
+        server-dir: /Upfolio/Upfolio/
