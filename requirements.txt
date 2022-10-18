@@ -2,7 +2,6 @@ asgiref==3.5.0
 Django==4.0.2
 django-phonenumber-field==6.1.0
 djangorestframework==3.13.1
-filter==0.0.0.20200724
 importlib-metadata==4.11.3
 Markdown==3.3.7
 phonenumbers==8.12.47

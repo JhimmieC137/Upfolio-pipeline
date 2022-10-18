@@ -1,6 +1,6 @@
 # from tkinter import Image
-from email import message
-from email.mime import image
+# from email import message
+# from email.mime import image
 # from tkinter import image_names
 from django.urls import reverse
 from django.shortcuts import render, redirect

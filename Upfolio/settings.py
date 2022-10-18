@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_q*+tvssljxatjn%xxjxd*78zwwv==u!ea69xs=uu4w&ad9_)g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.theupfolio.com", "theupfolio.com", "https://theupfolio.com"]
+ALLOWED_HOSTS = ["www.theupfolio.com", "theupfolio.com", "https://theupfolio.com", "127.0.0.1"]
 
 
 # Application definition
