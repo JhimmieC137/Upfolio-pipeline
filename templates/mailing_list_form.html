@@ -1,0 +1,344 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DLH36DVKS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-5DLH36DVKS');
+    </script>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Favicons -->
+    <link rel="icon" href="{% static 'img/Icons/Main_logo.ico'%}"  type = "image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/Icons/Main_logo.ico'%}" > 
+
+    <!-- Title Page-->
+    <title>Upfolio</title>
+
+    <!-- Icons font CSS-->
+    <link href="{% static 'vendor2/mdi-font/css/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor2/font-awesome-4.7/css/font-awesome.min.css' %}" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{% static 'vendor2/select2/select2.min.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'vendor2/datepicker/daterangepicker.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'css3/intlTelInput.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static 'css2/main.css' %}" rel="stylesheet" >
+    
+    <!-- Auxillary CSS-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+     <!-- AOS File installation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Mailchimp CSS-->
+    {% comment %} <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7_dtp.css" rel="stylesheet" type="text/css"> {% endcomment %}
+    {% comment %} <style type="text/css">
+        #mc_embed_signup{background:#fff;}
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style> {% endcomment %}
+
+</head>
+
+
+
+
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+        <div class="container d-flex align-items-center justify-content-between ">
+
+            <div class="logo">
+                <div class="logo"><a href="/" ><img src="{% static 'img/Icons/logo.png' %}" class="img-fluid" alt=""></a></div>
+                {% comment %} <h1><a href="index.html">Upfolio</a></h1> {% endcomment %}
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                  <li><a class="nav-link" href="/about">About Us</a></li>
+                  <li><a class="nav-link" href="https://upfolio.medium.com/" target="_blank" >Blog</a></li>
+                  <li class="dropdown" ><a class="" href="/opportunities"><span>Opportunities</span> <i class="bi bi-chevron-down"></a></i>
+                    <ul>
+                      <li><a href="/job-vacancies">Job Vacancies</a></li>
+                      <li><a href="/internships">Internships</a></li>
+                      <li><a href="/grants">Grants</a></li>
+                      <li><a href="/online-courses">Online Courses</a></li>
+                      <li><a href="/scholarships">Scholarships</a></li>
+                      <li><a href="/fellowships">Fellowship Programs</a></li>
+                      <li><a href="/competitions">Competitions</a></li>
+                      <li><a href="/volunteering">Volunteering</a></li>
+                      <li><a href="/fully-funded-programs">Fully Funded Programs</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="nav-link scrollto" href="/programs">Our Programs</a></li>
+                  <li><a class="nav-link scrollto" href="/projects">Our Projects</a></li>
+                  <li><a class="nav-link active scrollto" href="/join-our-community">Join our Community</a></li>
+                  <li><a class="nav-link" href="/contact-us">Contact Us</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+
+    <div class="page-wrapper bg-gra-03 p-t-100 font-poppins page-vector" >
+        <div class="wrapper wrapper--w780">
+            <div class="card-4" data-aos="zoom-out" data-aos-offset="50">
+                <div class="card-body">
+                    <!-- Begin Mailchimp Signup Form -->
+                    <div id="mc_embed_signup">
+                        <form action="https://bit.us4.list-manage.com/subscribe/post?u=6626aa149ad8c147094e0d282&amp;id=fbdc92be1f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div id="">
+                            <h2>Subscribe</h2>
+                            <div class="indicates-required"><span class="asterisk" >*</span> indicates required</div>
+                            <div class="row row-space">
+                                <div class="input-groupy">
+                                    <div class="col-1">
+                                        <div>
+                                            <label for="mce-EMAIL" class="label">Your Email Address  <span class="asterisk" style="color:#fd0404">*</span></label>
+                                        </div>
+                                        <div>
+                                            <input type="email" value="" name="EMAIL" class="required email  input--style-4" id="mce-EMAIL">
+                                            <i class="input-icon fa fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <div>
+                                            <label for="mce-FNAME" class="label">First Name </label>
+                                        </div>
+                                        <div>
+                                            <input type="text" value="" name="FNAME" class="input--style-4" id="mce-FNAME">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <div>
+                                            <label for="mce-LNAME" class="label">Last Name </label>
+                                        </div>
+                                        <div>
+                                            <input type="text" value="" name="LNAME" class="input--style-4" id="mce-LNAME">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <div>
+                                            <label for="mce-MMERGE6" class="label">Phone Number(WhatsApp) </label>
+                                        </div>
+                                        <div>
+                                            <input type="text" value="" name="MMERGE6" class="input--style-4" id="phone">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group size1of2">
+                                        <label for="mce-MMERGE7-month" class="label">Birthday </label>
+                                        <div class="datefield input-groupx">
+                                            <span class="subfield monthfield"><input class="input-birthday col-2" type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="MMERGE7[month]" id="mce-MMERGE7-month"></span>  /  
+                                            <span class="subfield dayfield"><input class="input-birthday col-2" type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="MMERGE7[day]" id="mce-MMERGE7-day"></span> 
+                                            {% comment %} <span class="small-meta nowrap">( mm / dd )</span> {% endcomment %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div hidden="true"><input type="hidden" name="tags" value="1918436"></div>
+                            <div id="mce-responses" class="col-2 justify-content-end">
+                                <div class="response-error" id="mce-error-response" style="display:none"></div>
+                                <div class="response-success" id="mce-success-response" style="display:none"></div>
+                            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            {% comment %} <div class="" style="position: absolute; left: -50px;" aria-hidden="true"><input type="text" name="b_6626aa149ad8c147094e0d282_fbdc92be1f" tabindex="-1" value=""></div> {% endcomment %}
+                            <div class="col-2 optionalParent">
+                                <div class="clear foot">
+                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class=" btn--radius  btn-2  btn--blue">
+                                    {% comment %} <p class="brandingLogo"><a href="http://eepurl.com/hRYOzj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> {% endcomment %}
+                                </div>
+                            </div>
+                        </form>
+                        <div class="container">
+                            <div class="social-links1"><br>
+                                <div>
+                                    <h4>Follow us on our different social platforms</h4>
+                                </div><br>
+                                <a href="https://www.bit.ly/HiUpfolio" target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+                                <a href="https://twitter.com/upfolio_" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="https://web.facebook.com/Upfolio-102584094994211" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="https://www.instagram.com/upfolio_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End mc_embed_signup-->
+                </div>
+            </div>
+        </div>
+    </div>
+     
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container bottom_border">
+    <div class="row justify-content-start">
+        <div class="footer_logo "><a href="/" ><img src="{% static 'img/Icons/logo.png' %}" class="img-fluid" alt=""></a>
+        </div>
+    </div>
+      <div class="row ">
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Main links</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="https://upfolio.medium.com/" target="_blank">Blog</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/programs">Our Programs</a></li>
+            <li><a href="/projects">Our Projects</a></li>
+            <li><a href="/join-our-community" >Join Our Community</a></li>
+            <li><a href="/contact-us" >Contact Us</a></li>
+          </ul>
+        </div>
+        <div class=" col-sm-4 col-md col ">
+          <h5 class="headin5_amrc col_white_amrc pt2">Opportunities</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="/job-vacancies">Job Vacancies</a></li>
+            <li><a href="/internships">Internships</a></li>
+            <li><a href="/fellowships">Fellowship Programs</a></li>
+            <li><a href="/volunteering">Volunteering</a></li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/online-courses">Online Courses</a></li>
+            <li><a href="/fully-funded-programs">Fully Funded Programs</a></li>
+            <li><a href="/grants">Grants</a></li>
+            <li><a href="/competitions">Competitions</a></li>
+          </ul>
+        </div>
+        <!--<div class=" col-sm-4 col-md  col-6 col">-->
+        <!--  <h5 class="headin5_amrc col_white_amrc pt2">Events</h5>-->
+        <!--  <ul class="footer_ul_amrc">-->
+        <!--    <li><a href="/annivesary_picnics">Annivesary Picnics</a></li>-->
+        <!--    <li><a href="/gallery_of_doings">Gallery of Doings</a></li>-->
+        <!--    <li><a href="/uip_placements">UIP Placements</a></li>-->
+        <!--  </ul>-->
+        <!--</div>-->
+        <div class=" col-sm-4 col-md  col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Contact</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="mailto:hello@theupfolio.com" target="_blank">Hello@theupfolio.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container top_border">
+
+      <div class='row'>
+        <p>© 2022 Upfolio. All rights reserved.</p>
+      </div>
+      <div class='row'>
+        <div class='container'>
+          <div class="social-links">
+            <a href="https://www.bit.ly/HiUpfolio" target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://twitter.com/upfolio_" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/upfolio_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://web.facebook.com/Upfolio-102584094994211" target="_blank" class="instagram"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/theupfolio/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href= mailto:"hello@theupfolio.com" target="_blank" class="linkedin"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    <!-- Jquery JS-->
+    <script src="{% static 'vendor2/jquery/jquery.min.js' %}"></script>
+
+    <!-- Vendor JS-->
+    <script src="{% static 'vendor2/select2/select2.min.js' %}"></script>
+    <script src="{% static 'vendor2/datepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor2/datepicker/daterangepicker.js' %}"></script>
+
+    <!-- Main JS-->
+    <script src="{% static 'js2/global.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    {% comment %} <script src="{% static 'js/main.js' %}"></script> {% endcomment %}
+
+
+    <script src="{% static 'js3/intlTelInput.js' %}"></script>
+    <script>
+        // Vanilla Javascript
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input,({
+            preferredCountries: ["us", "uk","ng", "ke", "gh", "tg" ]
+        }));
+
+        $(document).ready(function() {
+            $('.iti__flag-container').click(function() { 
+            var countryCode = $('.iti__selected-flag').attr('title');
+            var countryCode = countryCode.replace(/[^0-9]/g,'')
+            $('#phone').val("");
+            $('#phone').val("+"+countryCode+" "+ $('#phone').val());
+            });
+
+        
+
+        });
+
+            
+    </script>
+
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[6]='MMERGE6';ftypes[6]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='address';fnames[7]='MMERGE7';ftypes[7]='birthday';fnames[8]='MMERGE8';ftypes[8]='imageurl';fnames[9]='MMERGE9';ftypes[9]='imageurl';fnames[10]='MMERGE10';ftypes[10]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <!--End mc_embed_signup-->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

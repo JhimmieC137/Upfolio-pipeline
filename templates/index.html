@@ -1,0 +1,887 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5DLH36DVKS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-5DLH36DVKS');
+</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+  
+  <title>Upfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" href="{% static 'img/Icons/Main_logo.ico'%}"  type = "image/x-icon">
+  <link rel="shortcut icon" href="{% static 'img/Icons/Main_logo.ico'%}" > 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> {% endcomment %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
+
+  {% comment %} <link href="{% static 'css4/style.css' %}" rel="stylesheet"> {% endcomment %}
+  
+  <!-- AOS File installation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+
+
+<body>
+  
+  
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+    <div class="container d-flex align-items-center justify-content-between ">
+
+      <div class="logo">
+        <div class="logo "><a href="/" ><img src="{% static 'img/Icons/logo.png' %}" class="img-fluid" alt=""></a></div>
+        {% comment %} <h1><a href="index.html">Upfolio</a></h1> {% endcomment %}
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="/about">About Us</a></li>
+          <li><a class="nav-link" href="https://upfolio.medium.com/" target="_blank" >Blog</a></li>
+          <li class="dropdown" ><a href="/opportunities"><span>Opportunities</span> <i class="bi bi-chevron-down"></a></i>
+            <ul>
+              <li><a href="/job-vacancies">Job Vacancies</a></li>
+              <li><a href="/internships">Internships</a></li>
+              <li><a href="/grants">Grants</a></li>
+              <li><a href="/online-courses">Online Courses</a></li>
+              <li><a href="/scholarships">Scholarships</a></li>
+              <li><a href="/fellowships">Fellowship Programs</a></li>
+              <li><a href="/competitions">Competitions</a></li>
+              <li><a href="/volunteering">Volunteering</a></li>
+              <li><a href="/fully-funded-programs">Fully Funded Programs</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="/programs">Our Programs</a></li>
+          <li><a class="nav-link scrollto" href="/projects">Our Projects</a></li>
+          <li><a class="nav-link scrollto" href="/join-our-community">Join our Community</a></li>
+          <li><a class="nav-link" href="/contact-us">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" data-bs-interval="6000" class="container carousel carousel-fade" data-bs-ride="carousel">
+
+      <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Welcome to Upfolio</h2>
+            <p class="animate__animated fanimate__adeInUp">A community of passionate and active individuals with a goal to continually be a higher and better version of themselves and to be globally relevant across different niches.</p>
+            <a href="/#cta" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+          </div>
+        </div>
+
+      <!-- Slide 3 -->
+      {% for x in information %}
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">{{x.heading}}</h2>
+          <p class="animate__animated animate__fadeInUp">{{x.note}}</p>
+          <a href="{{x.about}}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div> 
+      {% endfor %} 
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#070707">
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    {% comment %} <section id="cta" class="cta">
+      <div class="container">
+        <div class="sections-title" data-aos="fade-up">
+          <h2>Get the career help you need to thrive</h2>
+          <p>Upfolio is a youth development organisation passionate 
+            about the personal and professional development of African 
+            youths. We do this through democratising opportunities for youths 
+            and creating authentic youth development projects and programs.
+          </p>
+        </div>
+      </div>
+    </section><!-- End About Section -->  {% endcomment %}
+
+    
+
+    <section id="cta" class="cta">
+      <div class="container-fluid">
+
+        <div class="row justify-content-center  content" data-aos="fade-up">
+          <div class="col-sm-5 col-lg-6 abt1">
+
+            <div data-aos="zoom-out">
+              <h2>Who we are?</h2>
+            </div>
+
+            <p>
+              We are a community of over 3500 active and engaging African youths ambitiously 
+              building a career across different fields.<br>
+              Upfolio is a youth development organisation passionate about the personal and professional development 
+              of African youths. We do this through democratising opportunities for youths and creating authentic 
+              youth development projects and programs.
+            </p>
+          </div>
+          <div class="col-sm-5 col-lg-5 abt2 pt-4 pt-lg-0">
+
+            <div data-aos="zoom-out">
+              <h2>What makes us unique?</h2>
+            </div>
+
+            <p>
+              We've realised that opportunities are much more than job postings especially for the African youth demographic always 
+              looking to measure up with the best talents in the world. Much more than job opportunities, we also provide you with 
+              internships, volunteering, fellowships, scholarships, competitions, fully funded programs and grant opportunities.
+            </p>
+            <a href="/about" class="learn-more-btn">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+        
+    <section id="cta2" class="cta2">
+      <div class="serv1">
+        <div class="row first content" data-aos="fade-up">
+          <div class="second">
+            <div class="serv-image1" data-aos="fade-in" data-aos-offset="200" data-aos-easing="ease-in-sine">
+              <div class="third-sm">
+                <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">
+                  <h2>What do we offer?</h2><br>
+                  <ul>
+                    <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500"><i class="ri-check-double-line"></i> A community of over 3500 active and engaging African youths ambitiously building a career in different work niches.</li><br><br>
+                    <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="250"><i class="ri-check-double-line"></i> A frequently updated job board to help you find niche-specific job opportunities.</li><br><br>
+                    <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="450"><i class="ri-check-double-line"></i> Programs and projects to equip you for the next opportunity.</li><br><br>
+                    <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="600"><i class="ri-check-double-line"></i> A bi-monthly newsletter filled with career tips and round up of opportunities.</li><br><br>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="third">
+            <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">
+              <h2>What do we offer?</h2><br>
+              <ul>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500"><i class="ri-check-double-line"></i> A community of over 3500 active and engaging African youths ambitiously building a career in different work niches.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="250"><i class="ri-check-double-line"></i> A frequently updated job board to help you find niche-specific job opportunities.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="450"><i class="ri-check-double-line"></i> Programs and projects to equip you for the next opportunity.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="600"><i class="ri-check-double-line"></i> A bi-monthly newsletter filled with career tips and round up of opportunities.</li><br><br>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row firstx content" data-aos="fade-up">
+          <div class="thirdx">
+            <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">
+              <h3>Get to know us</h3><br>
+              <ul>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500"><i class="ri-check-double-line"></i><b><a href="/projects#URB"> Upfolio Resource Bank:</a></b> Check out our crowdsourced online resource bank that cuts across different fields.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="250"><i class="ri-check-double-line"></i><b><a href="https://upfolio.medium.com/" target="_blank"> Read articles from our blog:</a></b> Get career tips and advice to help you make better career decisions.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="450"><i class="ri-check-double-line"></i><b><a href="/programs"> Programs:</a></b> Register and attend organised programs to bring you key information concerning your career goals and to develop your capacity.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="600"><i class="ri-check-double-line"></i><b><a href="/join-our-community"> Subscribe to our newsletter:</a></b> A round up of top opportunities around the world straight to your mailbox.</li><br><br>
+              </ul>
+            </div>
+          </div>
+          <div class="thirdxs">
+            <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">
+              <h2>Get to know us</h2><br>
+              <ul>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500"><i class="ri-check-double-line"></i><b><a href="/projects#URB"> Upfolio Resource Bank:</a></b> Check out our crowdsourced online resource bank that cuts across different fields.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="250"><i class="ri-check-double-line"></i><b><a href="https://upfolio.medium.com/" target="_blank"> Read articles from our blog:</a></b> Get career tips and advice to help you make better career decisions.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="450"><i class="ri-check-double-line"></i><b><a href="/programs">Programs:</a></b> Register and attend organised programs to bring you key information concerning your career goals and to develop your capacity.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="600"><i class="ri-check-double-line"></i><b><a href="/join-our-community"> Subscribe to our newsletter:</a></b> A round up of top opportunities around the world straight to your mailbox.</li><br><br>
+              </ul>
+            </div>
+          </div>
+          <div class="second">
+            <div class="serv-image2" data-aos="fade-in" data-aos-offset="200" data-aos-easing="ease-in-sine">
+              <div class="third-sm-2">
+                <div data-aos="fade-left" data-aos-offset="100" data-aos-easing="ease-in-sine">
+                  <h3>Get to know us</h3><br>
+                  <ul>
+                    <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500"><i class="ri-check-double-line"></i><b><a href="/projects#URB"> Upfolio Resource Bank:</a></b> Check out our crowdsourced online resource bank that cuts across different fields.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="100" data-aos-duration="500" data-aos-delay="250"><i class="ri-check-double-line"></i><b><a href="https://upfolio.medium.com/" target="_blank"> Read articles from our blog:</a></b> Get career tips and advice to help you make better career decisions.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="450"><i class="ri-check-double-line"></i><b><a href="/programs"> Programs:</a></b> Register and attend organised programs to bring you key information concerning your career goals and to develop your capacity.</li><br><br>
+                <li  data-aos="fade-left" data-aos-offset="150" data-aos-duration="500" data-aos-delay="600"><i class="ri-check-double-line"></i><b><a href="/join-our-community"> Subscribe to our newsletter:</a></b> A round up of top opportunities around the world straight to your mailbox.</li><br><br>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+      </div>
+    </section><!-- End About Section -->
+
+    {% comment %} <section class="Support-module--Support--sFlRZ Support-module--Support_padding--349iL">
+      <div class="">
+        <div class="Support-module--Support_container--7-y6i">
+          <div class="grid-span-1-7 Support-module--Support_image--k3S1u">
+            <span data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained">
+              <div style="max-width:1800px;display:block">
+                <img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height='1200' width='1800' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E" style="max-width:100%;display:block;position:static">
+              </div>
+              <img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsTAAALEwEAmpwYAAADJElEQVQozwEZA+b8AIZzYJqIdKaXgrapltDJwODc2dDLwLGija2bhauXgKSQeJ6IcZyFbZp/Z5JyWpV5YZJ3YYxyW4RqVnVeSwCRf2ugj3uomYazppO6rpzCuKrHwLK1qJSnmIOHcV+WgGynk3yfiHGcg2yfh3Cjj3mfjHedinWfjHeUgGsAl4ZypJWCqpyKsqWTtqmXuKybua6duauZeGVXOywnSjMsqZaDt6iVsqKNsKGOvbGfj35vj35usaOQn455AJyLd6GSf6ydirCikLSlk72wncO5pqycikk2LUY4MmI/MJ9+abKkkJh9Z6SMdKKIcZN6ZZB4Y5R+aIx0YACjkn1jRTpgQzlJPTc+LihUQDd1YlZ+aVk8KyVKMyxsPiybhHNoVU03HxuEaVaXfmiZgGiXfWSYgGmIcl4AiHVkNBsaGQkOGg8SDQUJCwIHGAYJRh8eOiUjMx4cUS4lZlFHNBweXDYrTiwjZkk9nYVsmYFql4NvOTAoAEkrJhYFDRQMEiYbHA4ICxoNEWwwLm4xLjkhIS4SFyoTFyIOFEgtJ1IuJjohHzcZGo53YqWReJJ6ZCscFAAhCRAJAw0SChAoHx4OBgtFGR12Jy1dHCM8ICBaKClbKSpCICF5TTw2ISFHKSQkDhZnQzaHaFVVMStMLSAADAQPDAQODQYOFAwRAwIHRx4dby8sRw0XOxweWzAtXyMoWTQpiVE5fVRAcUIxdkMwZjsrVS8kPRwYRiggABIGEAcDDA4IDR4VFwkBCFAqIINKNCQDDBUFDSsRFjYMFigRFE4kHW4+LXdGMWo9K3hON1k8Lz4hG0EfGAAUBhAKAw4XCxMaDhMAAAZAIRpyPS1MGBw5GhpEHx5sNSt8TTl4TTdbMSRpPzB9VT1/Vz1oQS9lPStTKhsAKRcZNyAgHQ8YFAcOEQYOKxESZzQmcz4tZjMmcUAud0gzUygeck07c088ako6SzQrOyciSzMqVjcqWTQgAFE5LmlPPisbHgQACxUJEBcMERkGDh0EDFEvJY1lRotjRGA8LTIVFD8hHG1JNV4/L043MEgyKk8wH1AwHuQ/93vS9x/jAAAAAElFTkSuQmCC" alt="">
+              <picture
+                <source type="image/webp" srcset="/static/b7a847ddec3b5b95509c25675c6e3df9/7df26/support.webp 450w,/static/b7a847ddec3b5b95509c25675c6e3df9/93a22/support.webp 900w,/static/b7a847ddec3b5b95509c25675c6e3df9/4c215/support.webp 1800w" sizes="(min-width: 1800px) 1800px, 100vw">
+                <img data-gatsby-image-ssr="" data-main-image="" style="opacity: 1;" sizes="(min-width: 1800px) 1800px, 100vw" decoding="async" loading="eager" src="https://d33wubrfki0l68.cloudfront.net/8cbb442d657393c4616571f9cf5f7e5899467830/bcd43/static/b7a847ddec3b5b95509c25675c6e3df9/3ba08/support.png" srcset="https://d33wubrfki0l68.cloudfront.net/f96a3fbdbcbf51d5d4104e86782c7dd1877b7115/37ee4/static/b7a847ddec3b5b95509c25675c6e3df9/7e7d1/support.png 450w,https://d33wubrfki0l68.cloudfront.net/a6a92d47648837b19f4c5c1fb2c720f36de8e43e/701df/static/b7a847ddec3b5b95509c25675c6e3df9/e4b18/support.png 900w,https://d33wubrfki0l68.cloudfront.net/8cbb442d657393c4616571f9cf5f7e5899467830/bcd43/static/b7a847ddec3b5b95509c25675c6e3df9/3ba08/support.png 1800w" alt="<span>Our support team is <br class=&quot;text-break&quot; /> your team</span>">
+              </picture>
+              <noscript>
+                <picture>
+                  <source type="image/webp" srcSet="/static/b7a847ddec3b5b95509c25675c6e3df9/7df26/support.webp 450w,/static/b7a847ddec3b5b95509c25675c6e3df9/93a22/support.webp 900w,/static/b7a847ddec3b5b95509c25675c6e3df9/4c215/support.webp 1800w" sizes="(min-width: 1800px) 1800px, 100vw"/>
+                  <img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1800px) 1800px, 100vw" decoding="async" loading="eager" src="https://d33wubrfki0l68.cloudfront.net/8cbb442d657393c4616571f9cf5f7e5899467830/bcd43/static/b7a847ddec3b5b95509c25675c6e3df9/3ba08/support.png" srcSet="https://d33wubrfki0l68.cloudfront.net/f96a3fbdbcbf51d5d4104e86782c7dd1877b7115/37ee4/static/b7a847ddec3b5b95509c25675c6e3df9/7e7d1/support.png 450w,https://d33wubrfki0l68.cloudfront.net/a6a92d47648837b19f4c5c1fb2c720f36de8e43e/701df/static/b7a847ddec3b5b95509c25675c6e3df9/e4b18/support.png 900w,https://d33wubrfki0l68.cloudfront.net/8cbb442d657393c4616571f9cf5f7e5899467830/bcd43/static/b7a847ddec3b5b95509c25675c6e3df9/3ba08/support.png 1800w" alt="&lt;span&gt;Our support team is &lt;br class=&quot;text-break&quot; /&gt; your team&lt;/span&gt;"/>
+                </picture>
+              </noscript>
+              <script type="module">
+                const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1)}}
+              </script>
+            </span>
+          </div>
+          <header class="grid-span-8-6 Support-module--Support_header--2Yi-m">
+            <div class="Support-module--Support_header_section--EmDYA">
+              <span class="Support-module--Support_header_subtitle--lAhwV">SUPPORT WHEN YOU NEED IT</span>
+              <h2 class="Support-module--Support_header_title--a2Ir5">
+                <span>Our support team is <br class="text-break"> your team</span>
+              </h2>
+              <p class="Support-module--Support_header_desc--3sCJC">Our support team are a mix of bankers and growth experts ready to help you. With a Brass account, 
+                you get a team that is genuinely seeking to understand your business and provide solutions for its financial operations. <br> <br>  We are committed to going 
+                beyond issue resolution to becoming your partner in the growing and smooth running of your business.
+              </p> 
+            </div>
+          </header>
+        </div>
+      </div>
+    </section> {% endcomment %}
+
+    {% comment %} <section id="con" class="con">
+      <div class="row " data-aos="zoom-out" data-aos-offset="50">
+        <div class="text-center">
+          <h3>How to get started</h3>
+          <p>Get the best of what we have to offer through 4 easy steps</p>
+          <i class="bi bi-arrow-down"></i>
+        </div>
+      </div>
+    </section><!-- End Cta Section --> {% endcomment %}
+
+    {% comment %} <div>
+      <h2>Our Services?</h2><br> {% endcomment %}
+      {% comment %} <div class="_4-bubbles-text">
+        <div class="first-bubbles">
+          <div class="step-bubbles1" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="700">
+            <p>Get access to frequently updated job postings, internships, 
+              fellowships, grants and scholarship opportunities</p>
+          </div>
+          <div class="step-bubbles-margin1" data-aos="zoom-in" data-aos-offset="100" data-aos-duration="700" data-aos-delay="250">
+            <p>Get career tips and advice from different articles 
+              on our blog to help you make better career choices
+            </p>
+          </div>
+        </div>
+        <div class="second-bubbles">
+          <div class="step-bubbles2" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="700" data-aos-delay="200">
+            <p>Check out our crowdsourced online resource bank that cuts across many different fields.</p>
+          </div>
+          <div class="step-bubbles-margin2" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="700" data-aos-delay="300">
+            <p>Subscribe to our newsletter and get a round up of top opportunities 
+              around the world straight to your mailbox.</p>
+          </div>
+        </div>
+      </div>
+    </div> {% endcomment %}
+
+    <section id="con-cta" class="con-cta">
+      <div class="">
+
+        <div class="row" data-aos="zoom-out" data-aos-offset="50">
+          <div class="col-lg-9 text-lg-start">
+            <h3>Upfolio Internship Program (UIP)</h3><br>
+            <p>Gain valuable  work experience through a 3-month long paid internship. You could also be part of this project by being a sponsor or partnering with us</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-right" href="/projects#UIP">Learn more</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="servicces" class="servicces">
+      <div class="row servcc-title " data-aos="zoom-out" data-aos-offset="50">
+        <div class="text-center">
+          <h3>How to get started</h3>
+          <p>Get the best of what we have to offer through 4 easy steps</p>
+          {% comment %} <i class="bi bi-arrow-down"></i> {% endcomment %}
+        </div>
+      </div>
+
+      <div class="row justify-content-end">
+
+        <div class="_4-steps-text">
+          <div class="first-steps">
+            <div class="step-box" data-aos="zoom-in-left" data-aos-offset="100" data-aos-duration="700">
+              <div class="imgw">
+              </div>
+              <p class="paragraph-gray">Join our <a href="https://www.bit.ly/HiUpfolio"><u>WhatsApp community</u></a> and get to 
+                know about opportunities before anyone else does.</p>
+            </div>
+            <div class="step-box-margin" data-aos="zoom-in-left" data-aos-offset="100" data-aos-duration="700" data-aos-delay="100">
+              <div class="imgx">
+              </div>
+              <p class="paragraph-gray">Register and attend our <a href="/programs"><u>skill and 
+                capacity-building programs</u></a> and online events.</p>
+            </div>
+          </div>
+          <div class="second-steps">
+            <div class="step-box" data-aos="zoom-in-left" data-aos-offset="100" data-aos-duration="700" data-aos-delay="250">
+              <div class="imgy">
+              </div>
+              <p class="paragraph-gray">Participate in our <a href="/projects#UIP"><u>annual projects</u></a> or refer them to 
+                people that might need them.</p>
+            </div>
+            <div class="step-box-margin" data-aos="zoom-in-left" data-aos-offset="100" data-aos-duration="700" data-aos-delay="400">
+              <div class="imgz">
+              </div>
+              <p class="paragraph-gray">Subscribe to our <a href="/join-our-community"><u>newsletter</u></a> and follow us on all our 
+                <a href="#footer"><u>social outlets</u></a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <section id="partners" class="partners">
+        <h2 class="text-center">Our Partners</h2>
+        <div class="img-flex">
+            <div class="">
+              <img src="{% static 'img/Partners/Pottv.jpeg' %}" class="partners-img img-fluid">
+            </div>
+            <div class="">
+              <img src="{% static 'img/Partners/toast3.png' %}" class="partners-img img-fluid">
+            </div>
+        </div>    
+        </section>
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="portfolio-title" data-aos="zoom-out" data-aos-offset="50">
+          <h2>Gallery</h2>
+          <p>Have a glance at the highlights of our previous Information Sessions(IS), 
+            Capacity Development Sessions(CDS), Projects and Blog Articles(BA).<br><br>Cilck on the initials below to view.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-end" data-aos="fade-up">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">IS</li>
+          <li data-filter=".filter-card">CDS</li>
+          <li data-filter=".filter-key">Projects</li>
+          <li data-filter=".filter-web">BA</li>
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          {% for x in programs %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src={{x.flier_1.url}} class="img-fluid" alt=""><a href={{x.link}}></div>
+            <div class="portfolio-info">
+              <h4>{{x.theme}}</h4>
+              <p>{{x.date}}</p>
+              <a href={{x.flier_1.url}} target="_blank" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"></a>
+              <a href={{x.link}} class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% for x in cap_dev %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src={{x.flier_1.url}} class="img-fluid" alt=""><a href={{x.link}}></div>
+            <div class="portfolio-info">
+              <h4>{{x.theme}}</h4>
+              <p>{{x.date}}</p>
+              <a href={{x.flier_1.url}} target="_blank" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"></a>
+              <a href={{x.link}} class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% for x in projects %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-key">
+            <div class="portfolio-img"><img src={{x.flier_1.url}} class="img-fluid" alt=""><a href={{x.link}}></div>
+            <div class="portfolio-info">
+              <h4>{{x.theme}}</h4>
+              <a href={{x.flier_1.url}} target="_blank" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"></a>
+              <a href={{x.link}} class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+          
+          {% for x in articles %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src={{x.flier_1.url}} class="img-fluid" alt=""><a href={{x.link}}></div>
+            <div class="portfolio-info">
+              <h4>{{x.title}}</h4>
+              <a href={{x.flier_1.url}} target="_blank" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"></a>
+              <a href={{x.link}} class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Testimonialz Section ======= -->
+    <section id="testimonialz" class="testimonialz">
+      <div class="">
+        <div class="testimonialz-title" data-aos="zoom-out" >
+          <h2>Meet our workforce</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            {% for people in team %}
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <a href="/about#hou"><img src="{{people.img.url}}" class="testimonial-img" alt=""></a>
+                  <h3>{{people.name}}</h3>
+                  <h6>{{people.team}}</h6>
+                  <h6>{{people.role}}</h6>
+                </div>
+              </div><!-- End testimonial item -->
+            {% endfor %}
+          </div>
+          {% comment %} <div class="swiper-pagination"></div> {% endcomment %}
+        </div>
+      </div>
+    </section><!-- End Testimonials Section --> 
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="faq-title" data-aos="zoom-out" data-aos-offset="50">
+          <h2>F.A.Q</h2>
+          {% comment %} <p>Frequently Asked Questions</p> {% endcomment %}
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <div data-bs-toggle="collapse"  href="#faq1" class="collapsed question">How can i get updates on opportunities, programs and projects? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Subscribe to our mailing list, join our community on whatsapp and our other social platforms. Click <a href="/join-our-community"><u>here</u></a> to begin 
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Is this a paid job? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                No. Upfolio is a non-profit organization with fully volunteer workers. However, we are open to sponsorship deals on any of our projects or programs
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">How authentic is your information on opportunities? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Upfolio searches for opportunities from trusted sources and also carries out neccessary checks to esure the careful curation of opportunities we deliver.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">How can I become a member of Upfolio ? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Calls are made for volunteers to join the team more than once a year. Stay tuned for the next call.
+              </p>
+            </div>
+          </li>
+
+          {% comment %} <li>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li> {% endcomment %}
+
+          {% comment %} <li>
+            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li> {% endcomment %}
+
+        </ul>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+    {% comment %} <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="">
+
+        <div class="testimonials-title" data-aos="zoom-out">
+          <h2>Testimonials</h2>
+          <h2>What they are saying about us</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat iuou nij ipij pij ip jip jpi
+                   pij [oj[o jo j[ oj[ [ oj[ ob ouyv iyvi yg  sem cure digni 
+                   ssim donec porttitora entum suscipit rhoncus. Accusantium 
+                   quam, ultricies eget id, aliquam eget nibh et
+                   . Maecen aliquam, risus at semperst idyoy<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+            
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat iuou nij ipij pij ip jip jpi
+                   pij [oj[o jo j[ oj[ [ oj[ ob ouyv iyvi yg  sem cure digni 
+                   ssim donec porttitora entum suscipit rhoncus. Accusantium 
+                   quam, ultricies eget id, aliquam eget nibh et
+                   . Maecen aliquam, risus at semperst idyoy<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat iuou nij ipij pij ip jip jpi
+                   pij [oj[o jo j[ oj[ [ oj[ ob ouyv iyvi yg  sem cure digni 
+                   ssim donec porttitora entum suscipit rhoncus. Accusantium 
+                   quam, ultricies eget id, aliquam eget nibh et
+                   . Maecen aliquam, risus at semperst idyoy<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat iuou nij ipij pij ip jip jpi
+                   pij [oj[o jo j[ oj[ [ oj[ ob ouyv iyvi yg  sem cure digni 
+                   ssim donec porttitora entum suscipit rhoncus. Accusantium 
+                   quam, ultricies eget id, aliquam eget nibh et
+                   . Maecen aliquam, risus at semperst idyoy<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat iuou nij ipij pij ip jip jpi
+                   pij [oj[o jo j[ oj[ [ oj[ ob ouyv iyvi yg  sem cure digni 
+                   ssim donec porttitora entum suscipit rhoncus. Accusantium 
+                   quam, ultricies eget id, aliquam eget nibh et
+                   . Maecen aliquam, risus at semperst idyoy<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat iuou nij ipij pij ip jip jpi
+                   pij [oj[o jo j[ oj[ [ oj[ ob ouyv iyvi yg  sem cure digni 
+                   ssim donec porttitora entum suscipit rhoncus. Accusantium 
+                   quam, ultricies eget id, aliquam eget nibh et
+                   . Maecen aliquam, risus at semperst idyoy<i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section --> {% endcomment %}
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="contact-title" data-aos="zoom-out">
+          <h2>Contact Us</h2>
+          {% comment %} <p>Contact Us</p> {% endcomment %}
+        </div>
+
+      </div>
+
+    </section>
+
+    {% if message_name %}
+    <section class="inner-page">
+      <div class="container contact">
+        <center>
+          <h1>Thanks for reaching out {{ message_name }}!</h1>
+          <p> You should get a feedback shortly</p><br><br><br>
+          <div class="row  thanks-img">
+            <center><img src="{% static 'img/first.jpg' %}" class="img-fluid"></center>
+          </div>
+        </center>
+      </div>
+    </section>
+
+    {% else %}
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        {% comment %} <div class="section-title" data-aos="zoom-out">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div> {% endcomment %}
+          
+        <div class="row mt-5">
+
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Bodija, Ibadan</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>Hello@theupfolio.com</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+            <form action="{% url 'contact_us' %}"  method="POST" class="php-email-form">
+                {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message" required></textarea>
+              </div>
+              {% comment %} <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div> {% endcomment %}
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+    {% endif %}
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="container bottom_border">
+    <div class="row justify-content-start">
+        <div class="footer_logo "><a href="/" ><img src="{% static 'img/Icons/logo.png' %}" class="img-fluid" alt=""></a>
+        </div>
+    </div>
+      <div class="row ">
+        <div class=" col-sm-4 col-md  col-6 col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Main links</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="https://upfolio.medium.com/" target="_blank">Blog</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/programs">Our Programs</a></li>
+            <li><a href="/projects">Our Projects</a></li>
+            <li><a href="/join-our-community" >Join Our Community</a></li>
+            <li><a href="/contact-us" >Contact Us</a></li>
+          </ul>
+        </div>
+        <div class=" col-sm-4 col-md col ">
+          <h5 class="headin5_amrc col_white_amrc pt2">Opportunities</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="/job-vacancies">Job Vacancies</a></li>
+            <li><a href="/internships">Internships</a></li>
+            <li><a href="/fellowships">Fellowship Programs</a></li>
+            <li><a href="/volunteering">Volunteering</a></li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/online-courses">Online Courses</a></li>
+            <li><a href="/fully-funded-programs">Fully Funded Programs</a></li>
+            <li><a href="/grants">Grants</a></li>
+            <li><a href="/competitions">Competitions</a></li>
+          </ul>
+        </div>
+        <!--<div class=" col-sm-4 col-md  col-6 col">-->
+        <!--  <h5 class="headin5_amrc col_white_amrc pt2">Events</h5>-->
+        <!--  <ul class="footer_ul_amrc">-->
+        <!--    <li><a href="/annivesary_picnics">Annivesary Picnics</a></li>-->
+        <!--    <li><a href="/gallery_of_doings">Gallery of Doings</a></li>-->
+        <!--    <li><a href="/uip_placements">UIP Placements</a></li>-->
+        <!--  </ul>-->
+        <!--</div>-->
+        <div class=" col-sm-4 col-md  col">
+          <h5 class="headin5_amrc col_white_amrc pt2">Contact</h5>
+          <ul class="footer_ul_amrc">
+            <li><a href="mailto:hello@theupfolio.com" target="_blank">Hello@theupfolio.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container top_border">
+
+      <div class='row'>
+        <p>© 2022 Upfolio. All rights reserved.</p>
+      </div>
+      <div class='row'>
+        <div class='container'>
+          <div class="social-links">
+            <a href="https://www.bit.ly/HiUpfolio" target="_blank" class="linkedin"><i class="bx bxl-whatsapp"></i></a>
+            <a href="https://twitter.com/upfolio_" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/upfolio_/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://web.facebook.com/Upfolio-102584094994211" target="_blank" class="instagram"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.linkedin.com/company/theupfolio/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <a href= mailto:"hello@theupfolio.com" target="_blank" class="linkedin"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <!--<script src="{% static 'vendor/php-email-form/validate.js' %}"></script>-->
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  
+</body>
+</html>
