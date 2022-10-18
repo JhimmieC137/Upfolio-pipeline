@@ -1,5 +1,5 @@
-from datetime import date, datetime
-from tkinter import image_names
+# from datetime import date, datetime
+# from tkinter import image_names
 from django.shortcuts import render, redirect
 from django.http import request
 from django.contrib.auth.models import User, auth
