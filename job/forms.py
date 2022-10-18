@@ -1,5 +1,5 @@
-from socket import fromshare
-from tkinter import Widget
+# from socket import fromshare
+# from tkinter import Widget
 from django import forms
 from django.forms import ModelForm
 from.models import Subscribe
